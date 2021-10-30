@@ -9,6 +9,7 @@ import WatchList from "./components/WatchList";
 
 import "./App.scss";
 import GlobalProvider from "./context/GlobalState";
+import Card from "./components/Card";
 
 function App() {
 
@@ -28,6 +29,11 @@ function App() {
           <Route path="/Add">
             <Add/>
           </Route>
+
+          <Route path="/:id" exact>
+            <Card />
+          </Route>
+
         </Switch>
       </Router>
     </GlobalProvider>
